@@ -1,6 +1,18 @@
 :root {
-    --bg-color: #1a1a34;
+  --bg-color: #1a1a34;
 }
 .body {
-    background: var(--bg-color);
+  background: var(--bg-color);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
 }
