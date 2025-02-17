@@ -74,5 +74,47 @@ const displayWeatherData = (data) => {
     document.getElementById('description').textContent = data.weather[0].description
     document.getElementById('description1').textContent = data.weather[0].description
     let weather_icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+    changeBackground(data?.weather[0]?.description)
 }
 
+function changeBackground(description) {
+   const bg = document.getElementById('weather-app')
+    
+   switch (description) {
+    case 'broken clouds':
+        bg.style.backgroundImage = "url('../assets/images/clouds-3488632_640.jpg')"
+        break;
+    case 'clear sky':
+        bg.style.backgroundImage = "url('../assets/images/Untitled.jpeg')"
+        break;
+    case 'few clouds':
+        bg.style.backgroundImage = "url('../assets/images/Untitled.jpeg')"
+        break;
+    case 'scattered clouds':
+        bg.style.backgroundImage = "url('../assets/images/clouds-3422258_640.jpg')"
+        break;
+    case 'shower rain':
+        bg.style.backgroundImage = "url('../assets/images/m.jpeg')"
+        break;
+    case 'light rain':
+        bg.style.backgroundImage = "url('../assets/images/m.jpeg')"
+        break;
+    case 'thunderstorm':
+        bg.style.backgroundImage = "url('../assets/images/ai-generated-8214866_640.webp')"
+        break;
+    case 'smoke':
+        bg.style.backgroundImage = "url('../assets/images/b.jpeg')"
+        break;
+    case 'haze':
+        bg.style.backgroundImage = "url('../assets/images/c.jpeg')"
+        break;
+    case 'snow':
+        bg.style.backgroundImage = "url('../assets/images/a.jpeg')"
+        break;
+
+    default:
+        bg.style.backgroundImage = "none"
+        break;
+   }
+}
